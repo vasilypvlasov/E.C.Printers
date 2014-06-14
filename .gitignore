@@ -1,4 +1,5 @@
 vendor
 protected/runtime/*
+public/assets/*
 composer.lock
 !.gitkeep
