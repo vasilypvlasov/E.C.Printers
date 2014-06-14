@@ -1,0 +1,3 @@
+vendor
+protected/runtime/*
+composer.lock
