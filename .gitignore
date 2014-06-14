@@ -1,3 +1,4 @@
 vendor
 protected/runtime/*
 composer.lock
+!.gitkeep
