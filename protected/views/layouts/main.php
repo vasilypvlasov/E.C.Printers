@@ -18,7 +18,8 @@ AppAsset::register($this);
         <meta charset="<?= Yii::$app->charset ?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?= Html::encode($this->title) ?></title>
-        <?php $this->head() ?>
+        <?php $this->head();
+        $this->registerCssFile('css/main.css');?>
     </head>
     <body>
 
@@ -48,7 +49,9 @@ AppAsset::register($this);
         ?>
 
         <div class="content">
-            <?= Breadcrumbs::widget([
+            <?=
+            Breadcrumbs::widget([
+                'homeLink' => ['label' => 'Головна', 'url' => '/'],
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
             <?= $content ?>
@@ -58,6 +61,7 @@ AppAsset::register($this);
     <footer class="footer">
         <div class="container">
             <p class="pull-left">&copy; ХПК <?= date('Y') ?></p>
+
             <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>
