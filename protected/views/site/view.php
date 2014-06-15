@@ -27,23 +27,21 @@ $this->params['breadcrumbs'][] = $this->title;
     /** @var \app\models\Comment[] $comments */
     $comments = $model->getComments()->all();
     ?>
-    <?php if ($comments): ?>
-        <div class="bs-comments">
-            <?php foreach($comments as $c): ?>
-            <div class="alert alert-success">
-                <strong><?php echo $c->getUserName(); ?></strong>
-                <br/>
-                <?php echo $c->content; ?>
-            </div>
-            <?php endforeach; ?>
-
-            <?php $form = ActiveForm::begin(); ?>
-            <h4>Додавання коментаря:</h4>
-            <?= $form->field($comment, 'content')->widget(CKEditor::className()) ?>
-            <div class="form-group">
-                <?= Html::submitButton('Додати коментар', ['class' => 'btn btn-success']) ?>
-            </div>
-            <?php ActiveForm::end(); ?>
+    <div class="bs-comments">
+        <?php foreach($comments as $c): ?>
+        <div class="alert alert-success">
+            <strong><?php echo $c->getUserName(); ?></strong>
+            <br/>
+            <?php echo $c->content; ?>
         </div>
-    <?php endif; ?>
+        <?php endforeach; ?>
+
+        <?php $form = ActiveForm::begin(); ?>
+        <h4>Додавання коментаря:</h4>
+        <?= $form->field($comment, 'content')->widget(CKEditor::className()) ?>
+        <div class="form-group">
+            <?= Html::submitButton('Додати коментар', ['class' => 'btn btn-success']) ?>
+        </div>
+        <?php ActiveForm::end(); ?>
+    </div>
 </div>
