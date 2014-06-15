@@ -11,14 +11,16 @@ use Yii;
  * @property string $user_id
  * @property string $content
  * @property string $created
+ * @property integer $page_id
  * @property integer $visible
  */
 class Comment extends \yii\db\ActiveRecord
 {
     public function getUserName()
     {
-        return 'Анонім';//TODO get real user name if it set
+        return 'Анонім'; //TODO get real user name if it set
     }
+
     /**
      * @inheritdoc
      */
@@ -35,7 +37,7 @@ class Comment extends \yii\db\ActiveRecord
         return [
             [['content'], 'string'],
             [['created'], 'safe'],
-            [['visible'], 'integer'],
+            [['visible', 'page_id'], 'integer'],
             [['user_id'], 'string', 'max' => 255]
         ];
     }
@@ -51,6 +53,7 @@ class Comment extends \yii\db\ActiveRecord
             'content' => 'Текст',
             'created' => 'Створено',
             'visible' => 'Видимість',
+            'page_id' => 'Сторінка'
         ];
     }
 }
