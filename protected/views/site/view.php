@@ -39,6 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <?php $form = ActiveForm::begin(); ?>
             <h4>Додавання коментаря:</h4>
+            <?= $form->errorSummary($comment); ?>
             <?= $form->field($comment, 'content')->widget(CKEditor::className()) ?>
             <div class="form-group">
                 <?= Html::submitButton('Додати коментар', ['class' => 'btn btn-success']) ?>

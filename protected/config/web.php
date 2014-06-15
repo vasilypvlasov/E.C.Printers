@@ -5,6 +5,7 @@ $db = require(__DIR__ . '/db.php');
 
 $config = [
     'id' => 'basic',
+    'language'=>'uk-UA',
     'name'=>'" Навчальний комплекс "Принтери""',
     'vendorPath' => dirname(__DIR__) . '/../vendor',
     'basePath' => dirname(__DIR__).'',
