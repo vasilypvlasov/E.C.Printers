@@ -56,4 +56,6 @@ class Comment extends \yii\db\ActiveRecord
             'page_id' => 'Сторінка'
         ];
     }
+
+    
 }
