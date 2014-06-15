@@ -53,4 +53,6 @@ class Comment extends \yii\db\ActiveRecord
             'visible' => 'Видимість',
         ];
     }
+
+    
 }
