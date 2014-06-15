@@ -38,7 +38,7 @@ class Page extends \yii\db\ActiveRecord
 
     public function getComments()
     {
-        return self::hasMany('app\models\Comment', ['page_id'=>'id']);
+        return self::hasMany('app\models\Comment', ['page_id'=>'id'])->where('visible = TRUE');
     }
 
     /**

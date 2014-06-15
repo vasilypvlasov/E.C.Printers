@@ -5,6 +5,7 @@ $db = require(__DIR__ . '/db.php');
 
 $config = [
     'id' => 'basic',
+    'language'=>'uk-UA',
     'name'=>'" Навчальний комплекс "Принтери""',
     'vendorPath' => dirname(__DIR__) . '/../vendor',
     'basePath' => dirname(__DIR__).'',
@@ -24,10 +25,6 @@ $config = [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
-        ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

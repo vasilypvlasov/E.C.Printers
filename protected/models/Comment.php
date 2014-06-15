@@ -36,9 +36,9 @@ class Comment extends \yii\db\ActiveRecord
     {
         return [
             [['content'], 'string'],
+            [['content'], 'required'],
             [['created'], 'safe'],
-            [['visible', 'page_id'], 'integer'],
-            [['user_id'], 'string', 'max' => 255]
+            [['visible', 'page_id','user_id'], 'integer'],
         ];
     }
 
